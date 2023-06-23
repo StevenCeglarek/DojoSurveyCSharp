@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello!</title>
+</head>
+<body>
+    <div>
+        <h1>Submitted Info</h1>
+        <div class="flexbox">
+            <p>Name:</p>
+            <p>@ViewBag.name</p>
+        </div>
+        <div class="flexbox">
+            <p>Dojo Location:</p>
+            <p>@ViewBag.location</p>
+        </div>
+        <div class="flexbox">
+            <p>Favorite Language</p>
+            <p>@ViewBag.language</p>
+        </div>
+        <div class="flexbox">
+            <p>Comment (optional):</p>
+            @if (ViewBag.comment == null)
+            {<p class="nocomment">No Comment</p>}
+            else
+            {<p>@ViewBag.comment</p>}
+        </div>
+    </div>
+    <a href="/"><button>Go Back</button></a>
+
+</body>
+</html>
